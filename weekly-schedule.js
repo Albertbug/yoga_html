@@ -59,3 +59,47 @@ function generateWeeklySchedule() {
 }
 
 document.addEventListener('DOMContentLoaded', generateWeeklySchedule);
+
+
+
+
+
+// 创建月份日历
+function createMonthlyCalendar(year, month) {
+    const firstDay = new Date(year, month - 1, 1);
+    const lastDay = new Date(year, month, 0);
+    const daysInMonth = lastDay.getDate();
+    const startingDay = firstDay.getDay();
+
+    let calendarHTML = '<table class="calendar">';
+    calendarHTML += '<tr><th colspan="7">' + year + '年' + month + '月</th></tr>';
+    calendarHTML += '<tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>';
+
+    let day = 1;
+    for (let i = 0; i < 6; i++) {
+        calendarHTML += '<tr>';
+        for (let j = 0; j < 7; j++) {
+            if (i === 0 && j < startingDay) {
+                calendarHTML += '<td></td>';
+            } else if (day > daysInMonth) {
+                calendarHTML += '<td></td>';
+            } else {
+                calendarHTML += '<td>' + day + '</td>';
+                day++;
+            }
+        }
+        calendarHTML += '</tr>';
+        if (day > daysInMonth) {
+            break;
+        }
+    }
+
+    calendarHTML += '</table>';
+    return calendarHTML;
+}
+
+// 使用示例
+document.addEventListener('DOMContentLoaded', function() {
+    const calendarContainer = document.getElementById('calendar-container');
+    calendarContainer.innerHTML = createMonthlyCalendar(2024, 9);
+});
