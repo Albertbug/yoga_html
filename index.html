@@ -11,23 +11,30 @@
         <h1>瑜伽課程預約系統</h1>
         <nav>
             <ul>
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="schedule.html">課程表</a></li>
-                <li><a href="login.html">登入</a></li>
-                <li><a href="account.html">我的帳戶</a></li>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#schedule">課程表</a></li>
+                <li><a href="#login">登入</a></li>
+                <li><a href="#account">我的帳戶</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <section>
+        <section id="home">
             <h2>歡迎來到瑜伽課程預約系統</h2>
             <p>在這裡,您可以輕鬆地預約您喜愛的瑜伽課程。</p>
         </section>
         
-        <section>
+        <section id="schedule">
+            <h2>課程表</h2>
+            <div id="weekly-schedule">
+                <!-- 週課表將通過JavaScript動態生成 -->
+            </div>
+        </section>
+
+        <section id="teachers">
             <h2>我們的老師</h2>
-            <!-- 這裡將動態載入老師信息 -->
+            <!-- 這裡可以添加老師的介紹 -->
         </section>
     </main>
     
@@ -35,6 +42,6 @@
         <p>&copy; 2024 瑜伽課程預約系統. 保留所有權利。</p>
     </footer>
     
-    <script src="script.js"></script>
+    <script src="weekly-schedule.js"></script>
 </body>
 </html>
