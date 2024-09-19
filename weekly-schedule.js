@@ -19,7 +19,6 @@ const weeklySchedule = {
     '週四': [
         { time: '07:00-07:30', duration: 0.5, name: '呼吸法', teacher: 'Sabina', credits: 1 },
         { time: '09:00-10:00', duration: 1, name: '肌力核心', teacher: 'Ash', credits: 2 },
-        { time: '20:30-21:30', duration: 1, name: '流動瑜珈', teacher: 'Tiffany', credits: 2 }
     ],
     '週五': [
         { time: '21:10-22:10', duration: 1, name: '陰瑜珈', teacher: 'Sabina', credits: 2 }
